@@ -1,95 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Fragment } from 'react';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Fragment>
+      <nav aria-label="Main">
+        <button type="button">Web</button>
+        <button type="button">Art Work</button>
+      </nav>
+      <header>
+        <h1>Natalie LaPoint</h1>
+        <h2>Front End Developer</h2>
+        <h2>Accessibility Expert</h2>
+        <h2>Graphic Designer</h2>
+      </header>
+      <main>
+        <div id="about-me">
+          <h3>A little about me...</h3>
+          <div>
+            {`I'm a Twin Cities native with a passion for creating accessible, user-centered front-end experiences. I specialize in          developing and implementing robust component libraries that streamline workflows and enhance usability.
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            When I'm not diving into code, you'll find me honing my artistic skills, exploring new creative techniques, and finding inspiration in the world around me.
+
+            Accessibility and creativity are at the heart of everything I do, and I’m always excited to tackle new challenges that push the boundaries of innovation and inclusivity.`}
+          </div>
+        </div>
+        <div id="work-experience">
+          <h3>Work Experience</h3>
+          <h4>Allianz Life</h4>
+          <h5>Senior Software Engineer</h5>
+          <h5>May 2022-August 2023</h5>
+          <div>
+            <ul>
+              <li>Created and maintained Allianz Life’s component library AXL-UI.</li>
+              <li>Led the accessibility team to coordinate accessibility issues, auditing, and learning opportunities.</li>
+              <li>Tested and audited components to ensure compliance with WCAG standards.</li>
+              <li>Developed customer-facing calculators.</li>
+            </ul>
+          </div>
+          {/* Add Code Block Here */}
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer>
+        <h3>Contact Me~</h3>
+        <div>
+          <div>Link to LinkedIn</div>
+          <div>Link to Github</div>
+          <div>list email</div>
+        </div>
       </footer>
-    </div>
-  );
-}
+    </Fragment>
+  );  
+};
