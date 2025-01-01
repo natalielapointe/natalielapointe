@@ -20,6 +20,17 @@
   --font-large: 27px;
 }
 
+.gradient-text {
+  color: transparent;
+  background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 0 0;
+  background-clip: text;
+  background-attachment: fixed;
+  @extend .shimmer;
+}
+
 body {
   white-space: pre-line;
   margin: 0;
@@ -46,8 +57,8 @@ h2 {
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  background-attachment: initial;
   background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: 0 0;
@@ -98,7 +109,7 @@ h2 {
     background-attachment: initial;
     background-position: top left;
     transform:translate(-50%,-50%) rotate(-17deg);
-    opacity: 30%;
+    opacity: 20%;
   }
 }
 
@@ -116,13 +127,23 @@ h2 {
   background-color: white;
 }
 
+.header-name {
+  @extend .gradient-text;
+}
+
 .header-titles {
   padding: 0 0 20px;
+  @extend .gradient-text;
 }
 
 .file-name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
   h2 {
-    padding: 20px 0 20px 20px;
+    padding: 15px 0 15px 20px;
     margin: 0;
     font-size: var(--font-medium);
     text-transform: uppercase;
@@ -139,6 +160,15 @@ h2 {
     @extend .background;
     @extend .shimmer
   }
+}
+
+.close-button {
+  height: 20px;
+  width: 20px;
+  padding-right: 15px;
+  background-image: url('./images/close-button.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 

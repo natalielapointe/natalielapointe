@@ -19,6 +19,17 @@
   --font-large: 27px;
 }
 
+.gradient-text, .header-titles, .header-name {
+  color: transparent;
+  background: linear-gradient(216deg, rgb(102, 145, 255) 0%, rgb(119, 92, 240) 25%, rgb(220, 40, 127) 50%, rgb(255, 98, 0) 75%, rgb(255, 174, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-attachment: fixed;
+}
+
 body {
   white-space: pre-line;
   margin: 0;
@@ -45,8 +56,8 @@ h2 {
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  background-attachment: initial;
   background: linear-gradient(216deg, rgb(102, 145, 255) 0%, rgb(119, 92, 240) 25%, rgb(220, 40, 127) 50%, rgb(255, 98, 0) 75%, rgb(255, 174, 0) 100%);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: 0 0;
@@ -60,7 +71,7 @@ h2 {
     background-position: 100% 0;
   }
 }
-.shimmer, .file-name-container::before {
+.shimmer, .file-name-container::before, .gradient-text, .header-titles, .header-name {
   animation: shimmer 6s linear infinite alternate;
 }
 
@@ -94,7 +105,7 @@ h2 {
   background-attachment: initial;
   background-position: top left;
   transform: translate(-50%, -50%) rotate(-17deg);
-  opacity: 30%;
+  opacity: 20%;
 }
 
 .header-wrapper {
@@ -115,8 +126,14 @@ h2 {
   padding: 0 0 20px;
 }
 
+.file-name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 .file-name-container h2 {
-  padding: 20px 0 20px 20px;
+  padding: 15px 0 15px 20px;
   margin: 0;
   font-size: var(--font-medium);
   text-transform: uppercase;
@@ -129,6 +146,15 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.close-button {
+  height: 20px;
+  width: 20px;
+  padding-right: 15px;
+  background-image: url(/_next/static/media/close-button.eb3f32b3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .pixel-corners,

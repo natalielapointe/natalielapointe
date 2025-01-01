@@ -8,6 +8,7 @@ export default function Home() {
           <div className="pixel-corners--wrapper">
           <div className='file-name-container shimmer'>
             <h2>portfolio.js</h2>
+            <span className="close-button"></span>
           </div>
             <div className='header-content-wrapper'>
               <h1 className="header-name">Natalie <br/> LaPointe</h1>
