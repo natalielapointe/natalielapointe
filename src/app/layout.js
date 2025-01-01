@@ -1,9 +1,9 @@
-import "./globals.css";
+import "./globals.scss";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="background shimmer">
         {children}
       </body>
     </html>
