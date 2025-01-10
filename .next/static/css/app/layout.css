@@ -3,15 +3,15 @@
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
   font-family: "Daydream";
-  src: url(/Portfolio/_next/static/media/Daydream.2590467f.ttf) format("truetype");
+  src: url(/_next/static/media/Daydream.2590467f.ttf) format("truetype");
 }
 @font-face {
   font-family: "DigitalDisco";
-  src: url(/Portfolio/_next/static/media/DigitalDisco.1ab30d76.ttf) format("truetype");
+  src: url(/_next/static/media/DigitalDisco.1ab30d76.ttf) format("truetype");
 }
 @font-face {
   font-family: "VT323";
-  src: url(/Portfolio/_next/static/media/VT323-Regular.f4a4501e.ttf) format("truetype");
+  src: url(/_next/static/media/VT323-Regular.f4a4501e.ttf) format("truetype");
 }
 :root {
   --font-small: 12px;
