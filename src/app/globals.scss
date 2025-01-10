@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Daydream';
   src: url('./fonts/Daydream.ttf') format('truetype'); 
@@ -16,7 +15,7 @@
 
 :root {
   --font-small: 12px;
-  --font-medium: 17px;
+  --font-medium: 18px;
   --font-large: 27px;
 }
 
@@ -50,7 +49,14 @@ h1 {
 h2 {
   font-family: 'DigitalDisco';
   font-size: var(--font-medium);
-  margin: 0px 0px 5px;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Daydream';
+  color: white;
+  font-size: var(--font-small);
+  text-align: center;
 }
 
 .background {
@@ -105,7 +111,7 @@ h2 {
     top: 50%;
     width: 300%;
     height: 300%;
-    background-image: url('./images/pixel-grid.png');
+    background-image: url('/pixel-grid.png');
     background-attachment: initial;
     background-position: top left;
     transform:translate(-50%,-50%) rotate(-17deg);
@@ -115,9 +121,9 @@ h2 {
 
 .header-wrapper {
   display: flex;
-  min-height: 100vh;
+  min-height: 60vh;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .header-content-wrapper {
@@ -166,17 +172,48 @@ h2 {
   height: 20px;
   width: 20px;
   padding-right: 15px;
-  background-image: url('./images/close-button.png');
+  background-image: url('/close-button.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 5px;
 
+  img {
+    height: 24px;
+    width: 24px;
+    image-rendering: pixelated;
+    padding-right: 5px;
+  }
+}
 
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 50px;
 
+  .nav-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pixel Border Effect
 // https://pixelcorners.lukeb.co.uk/?radius=7&multiplier=3&border=1&border_width=1&border_color=#ff0000
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .pixel-corners,
 .pixel-corners--wrapper {
   clip-path: polygon(0px calc(100% - 12px),
