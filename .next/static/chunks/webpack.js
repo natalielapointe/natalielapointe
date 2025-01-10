@@ -178,7 +178,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("38807f1abb676973")
+/******/ 		__webpack_require__.h = () => ("3c58a4720cdc6bd2")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -685,7 +685,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/_next/";
+/******/ 		__webpack_require__.p = "/Portfolio/_next/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/react refresh */
