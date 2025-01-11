@@ -1,7 +1,11 @@
 import { Fragment } from 'react';
-import Image from "next/image";
-import folderIcon from '../../public/folderIcon.svg';
-// import pixelStar from '../../public/pixelStar.svg';
+import laptopIcon from './images/laptopIcon.svg';
+import a11yIcon from './images/a11yIcon.svg';
+import graphicDesignerIcon from './images/graphicDesignerIcon.svg';
+import folderIcon from './images/folderIcon.svg';
+import folderIconOrange from './images/folderIconOrange.svg';
+import folderIconPurple from './images/folderIconPurple.svg';
+import folderIconPink from './images/folderIconPink.svg';
 
 export default function Home() {
   return (
@@ -19,15 +23,15 @@ export default function Home() {
               </div>
               <div className="header-titles">
                 <span className="title-wrapper">
-                  <Image width={24} height={24} src="/laptopIcon.png" alt="" />
+                  <img src={laptopIcon} />
                   <h2>Front End Developer</h2>
                 </span>
                 <span className="title-wrapper">
-                  <img width={24} height={24} src="/a11yIcon.png" alt="" />
+                  <img src={a11yIcon} />
                   <h2>Accessibility Expert</h2>
                 </span>
                 <span className="title-wrapper">
-                  <Image width={24} height={24} src="/graphicDesignerIcon.png" alt="" />
+                  <img src={graphicDesignerIcon} />
                   <h2>Graphic Designer</h2>
                 </span>
               </div>
@@ -36,19 +40,19 @@ export default function Home() {
         </div>
         <div className="nav-wrapper">
           <div className='nav-item-wrapper'>
-            <img src='/folderIcon.svg' />
+            <img src={folderIcon} />
             <h3>About <br/> Me</h3>
           </div>
           <div className='nav-item-wrapper'>
-            <img src='/folderIconOrange.svg' />
+            <img src={folderIconOrange} />
             <h3>Resume</h3>
           </div>
           <div className='nav-item-wrapper'>
-            <img src='/folderIconPurple.svg' />
+            <img src={folderIconPurple} />
             <h3>Shop</h3>
           </div>
           <div className='nav-item-wrapper'>
-            <img src='/folderIconPink.svg' />
+            <img src={folderIconPink} />
             <h3>Contact</h3>
           </div>
         </div>
