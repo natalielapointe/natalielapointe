@@ -6,10 +6,13 @@ import folderIcon from './images/folderIcon.svg';
 import folderIconOrange from './images/folderIconOrange.svg';
 import folderIconPurple from './images/folderIconPurple.svg';
 import folderIconPink from './images/folderIconPink.svg';
+import MyComponent from './about-me.js';
+
 
 export default function Home() {
   return (
     <Fragment>
+      <MyComponent />
       <div className="background-pixel-grid gird-shift">
         <div className="header-wrapper">
           <div className="pixel-corners--wrapper">
