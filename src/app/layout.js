@@ -21,22 +21,22 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className="nav-wrapper">
-            <Link href="/about-me">
+            <Link href="/">
               <div className='nav-item-wrapper'>
                 <img src={folderIcon} />
-                <h3>About <br/> Me</h3>
+                <h3>Home</h3>
+              </div>
+            </Link>
+            <Link href="/about-me">
+              <div className='nav-item-wrapper'>
+                <img src={folderIconOrange} />
+                <h3>About me</h3>
               </div>
             </Link>
             <Link href="/resume">
               <div className='nav-item-wrapper'>
-                <img src={folderIconOrange} />
-                <h3>Resume</h3>
-              </div>
-            </Link>
-            <Link href="/shop">
-              <div className='nav-item-wrapper'>
                 <img src={folderIconPurple} />
-                <h3>Shop</h3>
+                <h3>Resume</h3>
               </div>
             </Link>
             <Link href="/contact">
