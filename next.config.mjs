@@ -1,30 +1,37 @@
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-// Create __dirname for ES Modules compatibility
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  output: 'export',  // Ensure static export
+  output: 'export',
   distDir: 'dist',
   images: {
-    unoptimized: true,  // Disable Next.js image optimization
+    disableStaticImages: true,
   },
   webpack: (config) => {
-    // Add PNG (and other image formats) to be processed by Webpack
+    // Handle image assets (png, jpg, jpeg, gif, svg, etc.)
     config.module.rules.push({
       test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
-      include: path.resolve(__dirname, 'src/app/images'),  // Images in 'src/app/images'
-      type: 'asset/resource',  // Output as static assets
+      include: path.resolve(__dirname, 'src/app/images'),
+      type: 'asset/resource', // Webpack 5 asset module
       generator: {
-        filename: 'static/images/[hash][ext]',  // Place in static/images with hashed filenames
+        filename: 'static/images/[hash][ext]', // Output hashed filenames
       },
     });
+
+    // Handle SCSS files
+    config.module.rules.push({
+      test: /\.(scss|sass)$/,
+      use: [
+        'style-loader',  // Inject styles into DOM
+        'css-loader',    // Interprets CSS files
+        'sass-loader',   // Compiles Sass to CSS
+      ],
+    });
+
     return config;
   },
-  sassOptions: {
-    silenceDeprecations: ['legacy-js-api'],
-  }
 };
 
 export default nextConfig;

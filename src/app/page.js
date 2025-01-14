@@ -1,12 +1,6 @@
-import { Fragment } from 'react';
-import Link from 'next/link'
 import laptopIcon from './images/laptopIcon.svg';
 import a11yIcon from './images/a11yIcon.svg';
 import graphicDesignerIcon from './images/graphicDesignerIcon.svg';
-import folderIcon from './images/folderIcon.svg';
-import folderIconOrange from './images/folderIconOrange.svg';
-import folderIconPurple from './images/folderIconPurple.svg';
-import folderIconPink from './images/folderIconPink.svg';
 
 export default function Home() {
   return (

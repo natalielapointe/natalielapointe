@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             <Link href="/about-me">
               <div className='nav-item-wrapper'>
                 <img src={folderIconOrange} />
-                <h3>About me</h3>
+                <h3>About <br/> me</h3>
               </div>
             </Link>
             <Link href="/resume">

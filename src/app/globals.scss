@@ -185,7 +185,6 @@ h3 {
   img {
     height: 24px;
     width: 24px;
-    image-rendering: pixelated;
     padding-right: 5px;
   }
 }
@@ -194,7 +193,7 @@ h3 {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 50px;
 
   .nav-item-wrapper {
@@ -209,6 +208,15 @@ h3 {
   }
 }
 
+///////
+.content-wrapper {
+  background-color: white;
+}
+
+#facePhoto {
+  height: 30px;
+  width: 30px;
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pixel Border Effect
 // https://pixelcorners.lukeb.co.uk/?radius=7&multiplier=3&border=1&border_width=1&border_color=#ff0000
