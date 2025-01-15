@@ -73,7 +73,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow: scroll;
-  display: block;
+  display: block !important;
 }
 
 h1 {
@@ -84,17 +84,24 @@ h1 {
   font-size: var(--font-large);
 }
 
-h2 {
+.title-wrapper span {
   font-family: 'DigitalDisco';
   font-size: var(--font-medium);
   margin: 0;
 }
 
-h3 {
-  font-family: 'Daydream';
-  color: white;
-  font-size: var(--font-small);
-  text-align: center;
+.nav-wrapper {
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    font-family: 'Daydream';
+    color: white;
+    font-size: var(--font-small);
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 .background {
@@ -170,7 +177,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
 
-  h2 {
+  #fileName {
     padding: 15px 0 15px 20px;
     margin: 0;
     font-size: var(--font-medium);
@@ -211,12 +218,17 @@ h3 {
   }
 }
 
+.home-list {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
 .nav-wrapper {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 25px;
 
   .nav-item-wrapper {
     display: flex;
@@ -242,10 +254,11 @@ h3 {
   .flex-column {
     padding: 0 15px 30px;
   }
-  
+
   div {
     font-family: 'VT323';
     color: #6f123f;
+    font-size: var(--font-medium);
   }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////
