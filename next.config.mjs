@@ -1,5 +1,7 @@
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
+import * as sass from 'sass'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -9,25 +11,65 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
+  experimental: {
+    optimizeCss: true,
+  },
+  sassOptions: {
+    quietDeps: true,
+  },
   webpack: (config) => {
-    // Handle image assets (png, jpg, jpeg, gif, svg, etc.)
     config.module.rules.push({
       test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
       include: path.resolve(__dirname, 'src/app/images'),
-      type: 'asset/resource', // Webpack 5 asset module
+      type: 'asset/resource', 
       generator: {
-        filename: 'static/images/[hash][ext]', // Output hashed filenames
+        filename: 'static/images/[hash][ext]',
       },
     });
 
-    // Handle SCSS files
     config.module.rules.push({
       test: /\.(scss|sass)$/,
       use: [
-        'style-loader',  // Inject styles into DOM
-        'css-loader',    // Interprets CSS files
-        'sass-loader',   // Compiles Sass to CSS
+        'style-loader', 
+        'css-loader', 
+        'sass-loader',
       ],
+    });
+
+    if (!config.plugins) {
+      config.plugins = [];
+    }
+
+    config.plugins.push({
+      apply: (compiler) => {
+        compiler.hooks.afterEmit.tapAsync('CopyCSSPlugin', (compilation, callback) => {
+          const scssFilePath = path.resolve(__dirname, 'src/app/globals.scss');
+          const outputPath = path.resolve(__dirname, 'public/styles/styles.css');
+
+          if (fs.existsSync(scssFilePath)) {
+            sass.render(
+              {
+                file: scssFilePath,
+                outputStyle: 'compressed', 
+              },
+              (error, result) => {
+                if (error) {
+                  console.error('Sass Compilation Error:', error);
+                  callback(error);
+                  return;
+                }
+
+                fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+                fs.writeFileSync(outputPath, result.css);
+                callback();
+              }
+            );
+          } else {
+            console.warn(`Sass file not found at: ${scssFilePath}`);
+            callback();
+          }
+        });
+      },
     });
 
     return config;

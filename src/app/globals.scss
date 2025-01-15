@@ -19,6 +19,44 @@
   --font-large: 27px;
 }
 
+.background-white {
+  background-color: white;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.overflow {
+  max-height: 70vh;
+  overflow-x: scroll;
+}
+
+.text-left-align {
+  text-align: left;
+}
+
+.flex-justify-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
 .gradient-text {
   color: transparent;
   background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
@@ -34,7 +72,7 @@ body {
   white-space: pre-line;
   margin: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: scroll;
   display: block;
 }
 
@@ -62,7 +100,6 @@ h3 {
 .background {
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
   background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -101,6 +138,9 @@ h3 {
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
  
 
   &::before {
@@ -119,27 +159,9 @@ h3 {
   }
 }
 
-.header-wrapper {
+.container-wrapper {
   display: flex;
-  min-height: 60vh;
   justify-content: center;
-  align-items: flex-end;
-}
-
-.header-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-}
-
-.header-name {
-  @extend .gradient-text;
-}
-
-.header-titles {
-  padding: 0 0 20px;
-  @extend .gradient-text;
 }
 
 .file-name-container {
@@ -209,13 +231,22 @@ h3 {
 }
 
 ///////
-.content-wrapper {
-  background-color: white;
-}
+
 
 #facePhoto {
-  height: 30px;
-  width: 30px;
+  height: 90px;
+  width: 90px;
+}
+
+#aboutMe {
+  .flex-column {
+    padding: 0 15px 30px;
+  }
+  
+  div {
+    font-family: 'VT323';
+    color: #6f123f;
+  }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pixel Border Effect
@@ -267,7 +298,6 @@ h3 {
 }
 .pixel-corners--wrapper {
   width: 90%;
-  height: fit-content;
 }
 .pixel-corners--wrapper .pixel-corners {
   display: block;

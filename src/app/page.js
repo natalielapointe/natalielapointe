@@ -4,11 +4,9 @@ import graphicDesignerIcon from './images/graphicDesignerIcon.svg';
 
 export default function Home() {
   return (
-    <div className='header-content-wrapper'>
-      <div className="header-name-wrapper">
-        <h1 className="header-name">Natalie <br/> LaPointe</h1>
-      </div>
-      <div className="header-titles">
+    <div className='background-white flex-column'>
+      <h1 className="gradient-text">Natalie <br/> LaPointe</h1>
+      <div className="gradient-text padding-bottom">
         <span className="title-wrapper">
           <img src={laptopIcon} />
           <h2>Front End Developer</h2>

@@ -5,19 +5,20 @@ import folderIconOrange from './images/folderIconOrange.svg';
 import folderIconPurple from './images/folderIconPurple.svg';
 import folderIconPink from './images/folderIconPink.svg';
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="background shimmer">
         <div className="background-pixel-grid gird-shift">
-          <div className="header-wrapper">
+          <div className="container-wrapper">
             <div className="pixel-corners--wrapper">
-              <div className='file-name-container shimmer'>
-                <h2>portfolio.html</h2>
-                <span className="close-button"></span>
-              </div>
+              <div className="overflow">
+                <div className='file-name-container shimmer'>
+                  <h2>portfolio.html</h2>
+                  <span className="close-button"></span>
+                </div>
                 {children}
+              </div>
             </div>
           </div>
           <div className="nav-wrapper">
