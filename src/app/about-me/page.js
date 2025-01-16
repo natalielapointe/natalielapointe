@@ -7,7 +7,7 @@ export default function AboutMe() {
         <img id="facePhoto" src={facePhoto} />
         <h1 className="gradient-text text-left-align">A little <br/> about me</h1>
       </div>
-      <div className="flex-column body-text-padding">
+      <div className="flex-column body-padding">
         <div className="body-text-font">
           Hi, I'm Natalie LaPointe, a passionate Senior Software Engineer based in Minneapolis, MN, with a strong focus on accessibility, front-end development, and creating efficient, user-friendly solutions. 
           <br/><br/>

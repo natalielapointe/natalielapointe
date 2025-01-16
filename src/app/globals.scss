@@ -57,7 +57,7 @@
   justify-content: space-around;
 }
 
-.body-text-padding {
+.body-padding {
   padding: 0 15px 30px;
 }
 
@@ -275,6 +275,34 @@ h1 {
   }
 }
 
+/////// Contact /////// 
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  min-width: 80%;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 115px;
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

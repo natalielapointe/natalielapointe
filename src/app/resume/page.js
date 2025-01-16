@@ -3,7 +3,7 @@ export default function Resume() {
     <div className="background-white" id="resume">
       <section id="experience">
         <h1 className="gradient-text" >Experience</h1>
-        <div className="body-text-padding body-text-font">
+        <div className="body-padding body-text-font">
           <article>
             <h2>Senior Software Engineer</h2>
             <p>
