@@ -4,7 +4,7 @@ import graphicDesignerIcon from './images/graphicDesignerIcon.svg';
 
 export default function Home() {
   return (
-    <div className='background-white flex-column'>
+    <section id="home" className='background-white flex-column'>
       <h1 className="gradient-text">Natalie <br/> LaPointe</h1>
       <ul className="gradient-text padding-bottom home-list">
         <li className="title-wrapper">
@@ -20,6 +20,6 @@ export default function Home() {
           <span>Graphic Designer</span>
         </li>
       </ul>
-    </div>
+    </section>
   );  
 };

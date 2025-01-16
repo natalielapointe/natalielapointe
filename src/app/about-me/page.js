@@ -2,13 +2,13 @@ import facePhoto from '../images/face-photo.png';
 
 export default function AboutMe() {
   return (
-    <div className="background-white" id="aboutMe">
+    <section id="aboutMe" className="background-white">
       <div className="flex-row flex-justify-space-around">
         <img id="facePhoto" src={facePhoto} />
         <h1 className="gradient-text text-left-align">A little <br/> about me</h1>
       </div>
-      <div className="flex-column">
-        <div>
+      <div className="flex-column body-text-padding">
+        <div className="body-text-font">
           Hi, I'm Natalie LaPointe, a passionate Senior Software Engineer based in Minneapolis, MN, with a strong focus on accessibility, front-end development, and creating efficient, user-friendly solutions. 
           <br/><br/>
           With a solid foundation in React, JavaScript, and component libraries, I specialize in developing intuitive, accessible, and scalable applications. I’m also certified in Accessibility (CPACC) and have a keen eye for ensuring my projects meet WCAG standards.
@@ -20,7 +20,7 @@ export default function AboutMe() {
           Feel free to browse my portfolio and reach out if you’d like to work together!
         </div>
       </div>
-    </div>
+    </section>
   )
 };
 

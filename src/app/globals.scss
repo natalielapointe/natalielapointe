@@ -57,6 +57,16 @@
   justify-content: space-around;
 }
 
+.body-text-padding {
+  padding: 0 15px 30px;
+}
+
+.body-text-font {
+  font-family: 'VT323';
+  color: #6f123f;
+  font-size: var(--font-medium);
+}
+
 .gradient-text {
   color: transparent;
   background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
@@ -242,25 +252,31 @@ h1 {
   }
 }
 
-///////
-
+/////// ABOUT ME /////// 
 
 #facePhoto {
   height: 90px;
   width: 90px;
 }
 
-#aboutMe {
-  .flex-column {
-    padding: 0 15px 30px;
+/////// RESUME /////// 
+
+#resume {
+  h2, p {
+    margin: 10px 0 0;
   }
 
-  div {
-    font-family: 'VT323';
-    color: #6f123f;
-    font-size: var(--font-medium);
+  strong {
+    padding-right: 5px;
+  }
+
+  article p time:first-of-type {
+    padding-left: 5px;
   }
 }
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pixel Border Effect
 // https://pixelcorners.lukeb.co.uk/?radius=7&multiplier=3&border=1&border_width=1&border_color=#ff0000
