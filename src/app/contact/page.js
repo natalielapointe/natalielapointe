@@ -42,7 +42,7 @@ const ContactUs = () => {
             <label>Message</label>
             <textarea name="message" />
           </div>
-          <input type="submit" value="Send" />
+          <input type="submit" value="Send" id="submitButton" className="gradient-text" />
         </form>
       </div>
     </div>
