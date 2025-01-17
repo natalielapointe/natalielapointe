@@ -67,9 +67,9 @@ const sendEmail = async (e) => {
   };
 
   return (
-    <div className="background-white" id="contact">
-      <div className="body-padding">
-        <h1 className="gradient-text">Contact Me</h1>
+    <section className="background-white flex-column" id="contact">
+      <h1 className="gradient-text">Contact Me</h1>
+      <div className="contact-form-wrapper">
         {submitted && <p id="formSubmitMessage">Thank you for reaching out! <br /> I'll get back to you soon.</p>}
         {formFailed && <p className="error-message">Oops, something went wrong! <br /> Send me an email at: hello@natalielapointe.com</p>}
         {!submitted && (
@@ -95,7 +95,7 @@ const sendEmail = async (e) => {
           </form>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import facePhoto from '../images/face-photo.png';
 export default function AboutMe() {
   return (
     <section id="aboutMe" className="background-white">
-      <div className="flex-row flex-justify-space-around">
+      <div className="flex-row flex-justify-center">
         <img id="facePhoto" src={facePhoto} />
         <h1 className="gradient-text text-left-align">A little <br/> about me</h1>
       </div>

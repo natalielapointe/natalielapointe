@@ -8,7 +8,7 @@ import folderIconPink from './images/folderIconPink.svg';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="background shimmer" style={{ display: 'none' }}>
+      <body id="appRoot" className="background shimmer" style={{ display: 'none' }}> 
         <div className="background-pixel-grid gird-shift">
           <div className="container-wrapper">
             <div className="pixel-corners--wrapper">

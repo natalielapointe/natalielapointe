@@ -13,10 +13,128 @@
   src: url('./fonts/VT323-Regular.ttf') format('truetype');
 }
 
+#appRoot {
+  font-family: 'VT323', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  white-space: pre-line;
+  box-sizing: border-box;
+  overflow: scroll;
+  display: block !important;
+}
+
+@media (min-width: 576px) {
+  #appRoot {
+    h1 {
+      font-size: 1.6875rem + .125rem;
+    }
+
+    .title-wrapper span {
+      font-size: 1.125rem + .125rem;
+    }
+
+    .file-name-container #fileName {
+      font-size: 1.125rem + .125rem;
+    }
+
+    .close-button {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #appRoot {
+    h1 {
+      font-size: 1.6875rem + (.125rem * 2);
+    }
+
+    .title-wrapper span {
+      font-size: 1.125rem + (.125rem * 2);
+    }
+
+    .file-name-container #fileName {
+      font-size: 1.125rem + (.125rem * 2);
+    }
+
+    .pixel-corners--wrapper {
+      max-width: 400px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #appRoot {
+    h1 {
+      font-size: 1.6875rem + (.125rem * 3);;
+    }
+    
+    .title-wrapper span {
+      font-size: 1.125rem + (.125rem * 3);
+    }
+
+    .file-name-container #fileName {
+      font-size: 1.125rem + (.125rem * 3);
+    }
+
+    .pixel-corners--wrapper {
+      max-width: 500px;
+    }
+
+    #facePhoto {
+      height: 110px;
+      width: 110px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #appRoot {
+    h1 {
+      font-size: 1.6875rem + (.125rem * 4);
+    }
+
+    .title-wrapper span {
+      font-size: 1.125rem + (.125rem * 4);
+    }
+
+    .file-name-container #fileName {
+      font-size: 1.125rem + (.125rem * 4);
+    }
+
+    .close-button {
+      width: 30px;
+      height: 30px;
+    }
+
+    .body-text-font {
+      font-size: 1.125rem + .125rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  #appRoot {
+    h1 {
+      font-size: 1.6875rem + (.125rem * 5);
+    }
+
+    .title-wrapper span {
+      font-size: 1.125rem + (.125rem * 5);
+    }
+
+    .file-name-container #fileName {
+      font-size: 1.125rem + (.125rem * 5);
+    }
+  }
+}
+
 :root {
-  --font-small: 12px;
-  --font-medium: 18px;
-  --font-large: 27px;
+  --font-small: 0.75rem;
+  --font-medium: 1.125rem;
+  --font-large: 1.6875rem;
 }
 
 .background-white {
@@ -52,6 +170,11 @@
   text-align: left;
 }
 
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 .flex-justify-space-around {
   display: flex;
   justify-content: space-around;
@@ -78,17 +201,8 @@
   @extend .shimmer;
 }
 
-body {
-  white-space: pre-line;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: scroll;
-  display: block !important;
-}
-
 h1 {
-  margin: 0 0 20px;
-  padding-top: .67em;
+  margin: 20px 0;
   font-family: 'Daydream';
   text-align: center;
   font-size: var(--font-large);
@@ -98,20 +212,6 @@ h1 {
   font-family: 'DigitalDisco';
   font-size: var(--font-medium);
   margin: 0;
-}
-
-.nav-wrapper {
-  a {
-    text-decoration: none;
-  }
-
-  span {
-    font-family: 'Daydream';
-    color: white;
-    font-size: var(--font-small);
-    text-align: center;
-    margin-top: 10px;
-  }
 }
 
 .background {
@@ -237,8 +337,8 @@ h1 {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-  margin-top: 25px;
+  justify-content: center;
+  margin-top: 20px;
 
   .nav-item-wrapper {
     display: flex;
@@ -250,6 +350,19 @@ h1 {
     height: 50px;
     width: auto;
   }
+
+  a {
+    text-decoration: none;
+    padding: 0 10px;
+  }
+
+  span {
+    font-family: 'Daydream';
+    color: white;
+    font-size: var(--font-small);
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 /////// ABOUT ME /////// 
@@ -257,13 +370,22 @@ h1 {
 #facePhoto {
   height: 90px;
   width: 90px;
+  margin-right: 10px;
 }
 
 /////// RESUME /////// 
 
 #resume {
-  h2, p {
-    margin: 10px 0 0;
+  h2 {
+    margin: 15px 0 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin-top: 5px;
   }
 
   strong {
@@ -331,6 +453,11 @@ textarea {
   min-height: 145px;
 }
 
+.contact-form-wrapper {
+  padding-bottom: 8px;
+  width: 100%;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Pixel Border Effect
 // https://pixelcorners.lukeb.co.uk/?radius=7&multiplier=3&border=1&border_width=1&border_color=#ff0000
@@ -380,7 +507,8 @@ textarea {
   border: 3px solid transparent;
 }
 .pixel-corners--wrapper {
-  width: 90%;
+  width: 100%;
+  max-width: 360px;
 }
 .pixel-corners--wrapper .pixel-corners {
   display: block;
