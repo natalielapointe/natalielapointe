@@ -1,12 +1,24 @@
 'use client'
 
-import React, { useRef, Fragment, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
   const form = useRef();
   const [submitted, setSubmitted] = useState(false);
+  const [formFailed, setFormFailed] = useState(false);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [dots, setDots] = useState('.');
+
+  useEffect(() => {
+    if (loading) {
+      const interval = setInterval(() => {
+        setDots((prev) => (prev.length < 3 ? prev + '.' : '.'));
+      }, 500);
+      return () => clearInterval(interval);
+    }
+  }, [loading]);
 
   const validateForm = () => {
     const formData = new FormData(form.current);
@@ -32,25 +44,26 @@ const ContactUs = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const sendEmail = (e) => {
+const sendEmail = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
       return;
     }
 
-    emailjs
-      .sendForm('service_h90vfhm', 'template_s37ji4q', form.current, {
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm('service_h90vfhm', 'template_s37ji4q', form.current, {
         publicKey: 'H1nFGiS8r65V6Ikjp',
-      })
-      .then(
-        () => {
-          setSubmitted(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error('FAILED...', error.text);
+      setFormFailed(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -58,6 +71,7 @@ const ContactUs = () => {
       <div className="body-padding">
         <h1 className="gradient-text">Contact Me</h1>
         {submitted && <p id="formSubmitMessage">Thank you for reaching out! <br /> I'll get back to you soon.</p>}
+        {formFailed && <p className="error-message">Oops, something went wrong! <br /> Send me an email at: hello@natalielapointe.com</p>}
         {!submitted && (
           <form ref={form} onSubmit={sendEmail} className="body-text-font flex-column">
             <div className="form-field">
@@ -75,7 +89,9 @@ const ContactUs = () => {
               <textarea name="message" />
               {errors.message && <p className="error-message">{errors.message}</p>}
             </div>
-            <button type="submit" id="submitButton" className="gradient-text pixel-corners--wrapper">Submit</button>
+            <button type="submit" id="submitButton" className="gradient-text pixel-corners--wrapper">
+              {loading ? `Sending${dots}` : 'Send'}
+            </button>
           </form>
         )}
       </div>
