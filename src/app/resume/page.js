@@ -12,7 +12,7 @@ export default function Resume() {
               <time dateTime="2022-05">May 2022</time>–<time dateTime="2023-08">August 2023</time>
             </p>
             <ul>
-              <li>Created and maintained Allianz Life’s component library AXL-UI using React, Pattern Lab, and SCSS.</li>
+              <li>Created and maintained Allianz Life’s component library <a href="https://www.axl-ui.com/?path=/docs/introduction--docs">AXL-UI</a> using React, Pattern Lab, and SCSS.</li>
               <li>Led the accessibility team to coordinate accessibility issues, auditing, and learning opportunities.</li>
               <li>Tested and audited components to ensure compliance with WCAG standards.</li>
               <li>Developed customer-facing calculators using React.</li>
@@ -22,7 +22,7 @@ export default function Resume() {
           <article>
             <h2>Owner</h2>
             <p>
-              <strong>NatKatCraftsCo</strong>
+              <strong><a href="https://www.etsy.com/shop/NatKatCraftsCo?ref=seller-platform-mcnav">NatKatCraftsCo</a></strong>
               | Etsy | Minneapolis, MN |
               <time dateTime="2020-06">June 2020</time>–Present</p>
             <ul>
@@ -79,6 +79,11 @@ export default function Resume() {
               | Minneapolis, MN |
               <time dateTime="2016-05">May 2016</time>–<time dateTime="2016-08">August 2016</time>
             </p>
+            <ul>
+              <li>Developed and updated clients' sites through SportsEngine’s CMS.</li>
+              <li>Produced a fully custom site template for <a href="https://www.waya.org/">West Austin Youth Association (WAYA).</a></li>
+              <li>Collaborated with a small team to creatively solve problems on a complex code base.</li>
+            </ul>
           </article>
         </div>
       </section>
