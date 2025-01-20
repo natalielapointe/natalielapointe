@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import "./globals.scss";
 import Link from 'next/link'
 import folderIcon from './images/folderIcon.svg';
