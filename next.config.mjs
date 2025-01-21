@@ -1,5 +1,3 @@
-const isProd = process.env.NODE_ENV === 'production';
-
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -11,8 +9,6 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
-  basePath: isProd ? '/natalielapointe' : '',
-  assetPrefix: isProd ? '/natalielapointe' : '',
   experimental: {
     optimizeCss: true,
   },
