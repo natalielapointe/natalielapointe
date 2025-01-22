@@ -239,10 +239,6 @@ a:focus-visible {
   background-position: 0 0;
 }
 
-#contact, #resume, #aboutMe {
-  height: 548px;
-}
-
 @keyframes shimmer {
   from {
     background-position: 0 0;
@@ -441,6 +437,7 @@ a:focus-visible {
   border-radius: 4px;
   position: static;
   outline: none; 
+  margin-bottom: 8px;
 
   &:hover {
     cursor:pointer;
