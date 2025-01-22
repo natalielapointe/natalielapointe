@@ -239,6 +239,10 @@ a:focus-visible {
   background-position: 0 0;
 }
 
+#contact, #resume, #aboutMe {
+  height: 548px;
+}
+
 @keyframes shimmer {
   from {
     background-position: 0 0;
@@ -483,10 +487,6 @@ a:focus-visible {
 textarea {
   resize: vertical;
   min-height: 145px;
-}
-
-.message-field {
-  margin-bottom: 8px;
 }
 
 .contact-form-wrapper {

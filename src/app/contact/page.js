@@ -84,7 +84,7 @@ const sendEmail = async (e) => {
               <input type="email" name="user_email" />
               {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
-            <div className="form-field message-field">
+            <div className="form-field">
               <label>Message</label>
               <textarea name="message" />
               {errors.message && <p className="error-message">{errors.message}</p>}

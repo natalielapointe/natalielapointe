@@ -1,13 +1,22 @@
+'use client'
 export const dynamic = 'force-static';
 
 import "./globals.scss";
 import Link from 'next/link'
+import React, { useState } from 'react';
 import folderIcon from './images/folderIcon.svg';
 import folderIconOrange from './images/folderIconOrange.svg';
 import folderIconPurple from './images/folderIconPurple.svg';
 import folderIconPink from './images/folderIconPink.svg';
+import folderIconOpen from './images/folderIconOpen.svg';
+import folderIconOrangeOpen from './images/folderIconOrangeOpen.svg';
+import folderIconPurpleOpen from './images/folderIconPurpleOpen.svg';
+import folderIconPinkOpen from './images/folderIconPinkOpen.svg';
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
+  const [activeNav, setActiveNav] = useState('home');
+  console.log(activeNav);
+
   return (
     <html lang="en">
       <body id="appRoot" className="background shimmer" style={{ display: 'none' }}> 
@@ -24,27 +33,27 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <nav className="nav-wrapper">
-            <Link href="/">
+            <Link href="/" onClick={() => setActiveNav("home")}>
               <div className='nav-item-wrapper'>
-                <img src={folderIcon} />
+                {activeNav === "home" ? <img src={folderIconOpen} /> : <img src={folderIcon} /> }
                 <span>Home</span>
               </div>
             </Link>
-            <Link href="/about-me">
+            <Link href="/about-me" onClick={() => setActiveNav("aboutMe")}>
               <div className='nav-item-wrapper'>
-                <img src={folderIconOrange} />
+                {activeNav === "aboutMe" ? <img src={folderIconOrangeOpen} /> : <img src={folderIconOrange} /> }
                 <span>About <br/> me</span>
               </div>
             </Link>
-            <Link href="/resume">
+            <Link href="/resume" onClick={() => setActiveNav("resume")}>
               <div className='nav-item-wrapper'>
-                <img src={folderIconPurple} />
+                {activeNav === "resume" ? <img src={folderIconPurpleOpen} /> : <img src={folderIconPurple} /> }
                 <span>Resume</span>
               </div>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" onClick={() => setActiveNav("contact")}>
               <div className='nav-item-wrapper'>
-                <img src={folderIconPink} />
+                {activeNav === "contact" ? <img src={folderIconPinkOpen} /> : <img src={folderIconPink} /> }
                 <span>Contact</span>
               </div>
             </Link>
@@ -54,3 +63,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout;
