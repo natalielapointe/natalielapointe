@@ -407,8 +407,14 @@ a:focus-visible {
     padding-right: 5px;
   }
 
-  article p time:first-of-type {
-    padding-left: 5px;
+  article {
+    p time:first-of-type {
+      padding-left: 5px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
   }
 }
 
