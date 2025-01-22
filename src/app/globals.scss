@@ -208,6 +208,21 @@ h1 {
   font-size: var(--font-large);
 }
 
+input:focus, 
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: #5E9ED6 solid 1px;
+  outline-style: auto;
+}
+
+a:focus, 
+a:focus-visible {
+  outline: #5E9ED6 solid 1px;
+  outline-style: auto;
+  outline-offset: 3px;
+}
+
 .title-wrapper span {
   font-family: 'DigitalDisco';
   font-size: var(--font-medium);
@@ -399,6 +414,12 @@ h1 {
 
 /////// Contact /////// 
 
+.button-outline:focus-within {
+  outline: #5E9ED6 solid 1px;
+  outline-style: auto;
+  outline-offset: 3px;
+}
+
 #submitButton {
   font-family: 'DigitalDisco';
   font-size: large;
@@ -409,6 +430,11 @@ h1 {
   border: none;
   border-radius: 4px;
   position: static;
+  outline: none; 
+
+  &:hover {
+    cursor:pointer;
+  }
 }
 
 #formSubmitMessage {
@@ -453,9 +479,46 @@ textarea {
   min-height: 145px;
 }
 
+.message-field {
+  margin-bottom: 8px;
+}
+
 .contact-form-wrapper {
   padding-bottom: 8px;
   width: 100%;
+}
+
+////Button Animation/////
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+#submitButton span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#submitButton:hover span {
+  animation: bounce 0.6s ease infinite;
+}
+
+#submitButton:hover span:nth-child(1) {
+  animation-delay: 0s;
+}
+#submitButton:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#submitButton:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#submitButton:hover span:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

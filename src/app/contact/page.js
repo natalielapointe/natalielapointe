@@ -84,14 +84,24 @@ const sendEmail = async (e) => {
               <input type="email" name="user_email" />
               {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
-            <div className="form-field">
+            <div className="form-field message-field">
               <label>Message</label>
               <textarea name="message" />
               {errors.message && <p className="error-message">{errors.message}</p>}
             </div>
-            <button type="submit" id="submitButton" className="gradient-text pixel-corners--wrapper">
-              {loading ? `Sending${dots}` : 'Send'}
-            </button>
+            <div className="button-outline">
+              <button 
+                type="submit" 
+                id="submitButton" 
+                className="gradient-text pixel-corners--wrapper"
+              >
+                {!loading 
+                  ? 'Send'.split('').map((letter, index) => (
+                      <span key={index}>{letter}</span>
+                    ))
+                  : `Sending${dots}`}
+              </button>
+            </div>
           </form>
         )}
       </div>
