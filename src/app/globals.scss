@@ -105,22 +105,6 @@
   }
 }
 
-// @media (min-width: 1400px) {
-//   #appRoot {
-//     // h1 {
-//     //   font-size: 1.6875rem + (.125rem * 5);
-//     // }
-
-//     .title-wrapper span {
-//       font-size: 1.125rem + (.125rem * 5);
-//     }
-
-//     .file-name-container #fileName {
-//       font-size: 1.125rem + (.125rem * 5);
-//     }
-//   }
-// }
-
 :root {
   --font-small: 0.75rem;
   --font-medium: 1.125rem;
@@ -234,7 +218,7 @@ a:focus-visible {
 
 .background {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: linear-gradient(216deg, rgba(102,145,255,1) 0%, rgba(119,92,240,1) 25%, rgba(220,40,127,1) 50%, rgba(255,98,0,1) 75%, rgba(255,174,0,1) 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
