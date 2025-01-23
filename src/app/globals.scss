@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Daydream';
   src: url('./fonts/Daydream.ttf') format('truetype'); 
@@ -11,6 +12,10 @@
 @font-face {
   font-family: 'VT323';
   src: url('./fonts/VT323-Regular.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #appRoot {
@@ -34,13 +39,10 @@
       font-size: 1.125rem + .125rem;
     }
 
-    .file-name-container #fileName {
-      font-size: 1.125rem + .125rem;
-    }
-
     .close-button {
       width: 25px;
       height: 25px;
+      padding-right: 40px;
     }
   }
 }
@@ -52,10 +54,6 @@
     }
 
     .title-wrapper span {
-      font-size: 1.125rem + (.125rem * 2);
-    }
-
-    .file-name-container #fileName {
       font-size: 1.125rem + (.125rem * 2);
     }
 
@@ -72,10 +70,6 @@
     }
     
     .title-wrapper span {
-      font-size: 1.125rem + (.125rem * 3);
-    }
-
-    .file-name-container #fileName {
       font-size: 1.125rem + (.125rem * 3);
     }
 
@@ -100,10 +94,6 @@
       font-size: 1.125rem + (.125rem * 4);
     }
 
-    .file-name-container #fileName {
-      font-size: 1.125rem + (.125rem * 4);
-    }
-
     .close-button {
       width: 30px;
       height: 30px;
@@ -115,26 +105,38 @@
   }
 }
 
-@media (min-width: 1400px) {
-  #appRoot {
-    h1 {
-      font-size: 1.6875rem + (.125rem * 5);
-    }
+// @media (min-width: 1400px) {
+//   #appRoot {
+//     // h1 {
+//     //   font-size: 1.6875rem + (.125rem * 5);
+//     // }
 
-    .title-wrapper span {
-      font-size: 1.125rem + (.125rem * 5);
-    }
+//     .title-wrapper span {
+//       font-size: 1.125rem + (.125rem * 5);
+//     }
 
-    .file-name-container #fileName {
-      font-size: 1.125rem + (.125rem * 5);
-    }
-  }
-}
+//     .file-name-container #fileName {
+//       font-size: 1.125rem + (.125rem * 5);
+//     }
+//   }
+// }
 
 :root {
   --font-small: 0.75rem;
   --font-medium: 1.125rem;
   --font-large: 1.6875rem;
+}
+
+html, body {
+  height: 100dvh; 
+}
+
+#appRoot {
+  height: 100dvh;
+}
+
+body {
+  overflow: auto;
 }
 
 .background-white {
@@ -162,6 +164,7 @@
 }
 
 .overflow {
+  height: 100%;
   max-height: 80dvh;
   overflow-x: scroll;
 }
@@ -268,7 +271,7 @@ a:focus-visible {
 .background-pixel-grid {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -294,6 +297,8 @@ a:focus-visible {
 .container-wrapper {
   display: flex;
   justify-content: center;
+  max-height: 80dvh;
+  padding-top: 10px;
 }
 
 .file-name-container {
@@ -325,7 +330,7 @@ a:focus-visible {
 .close-button {
   height: 20px;
   width: 20px;
-  padding-right: 15px;
+  padding-right: 35px;
   background-image: url('./images/close-button.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -353,7 +358,8 @@ a:focus-visible {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 20px;
+  padding-top: 20px;
+  min-height: 20dvh;
 
   .nav-item-wrapper {
     display: flex;
@@ -376,7 +382,7 @@ a:focus-visible {
     color: white;
     font-size: var(--font-small);
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
   }
 }
 
