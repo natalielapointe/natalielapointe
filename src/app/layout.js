@@ -3,7 +3,7 @@ export const dynamic = 'force-static';
 
 import "./globals.scss";
 import Link from 'next/link'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import folderIcon from './images/folderIcon.svg';
 import folderIconOrange from './images/folderIconOrange.svg';
 import folderIconPurple from './images/folderIconPurple.svg';
@@ -14,8 +14,16 @@ import folderIconPurpleOpen from './images/folderIconPurpleOpen.svg';
 import folderIconPinkOpen from './images/folderIconPinkOpen.svg';
 
 const RootLayout = ({ children }) => {
-  const [activeNav, setActiveNav] = useState('home');
-  console.log(activeNav);
+  const [pathname, setPathname] = useState('');
+
+  useEffect(() => {
+    const updatePathname = () => setPathname(window.location.pathname);
+    updatePathname();
+    window.addEventListener('popstate', updatePathname);
+    return () => {
+      window.removeEventListener('popstate', updatePathname);
+    };
+  }, []);
 
   return (
     <html lang="en">
@@ -33,27 +41,27 @@ const RootLayout = ({ children }) => {
             </div>
           </div>
           <nav className="nav-wrapper">
-            <Link href="/" onClick={() => setActiveNav("home")}>
+            <Link href="/" onClick={() => setPathname("/")}>
               <div className='nav-item-wrapper'>
-                {activeNav === "home" ? <img src={folderIconOpen} /> : <img src={folderIcon} /> }
+                {pathname === "/" ? <img src={folderIconOpen} /> : <img src={folderIcon} /> }
                 <span>Home</span>
               </div>
             </Link>
-            <Link href="/about-me" onClick={() => setActiveNav("aboutMe")}>
+            <Link href="/about-me" onClick={() => setPathname("/about-me")}>
               <div className='nav-item-wrapper'>
-                {activeNav === "aboutMe" ? <img src={folderIconOrangeOpen} /> : <img src={folderIconOrange} /> }
+                {pathname === "/about-me" ? <img src={folderIconOrangeOpen} /> : <img src={folderIconOrange} /> }
                 <span>About <br/> me</span>
               </div>
             </Link>
-            <Link href="/resume" onClick={() => setActiveNav("resume")}>
+            <Link href="/resume" onClick={() => setPathname("/resume")}>
               <div className='nav-item-wrapper'>
-                {activeNav === "resume" ? <img src={folderIconPurpleOpen} /> : <img src={folderIconPurple} /> }
+                {pathname === "/resume" ? <img src={folderIconPurpleOpen} /> : <img src={folderIconPurple} /> }
                 <span>Resume</span>
               </div>
             </Link>
-            <Link href="/contact" onClick={() => setActiveNav("contact")}>
+            <Link href="/contact" onClick={() => setPathname("/contact")}>
               <div className='nav-item-wrapper'>
-                {activeNav === "contact" ? <img src={folderIconPinkOpen} /> : <img src={folderIconPink} /> }
+                {pathname === "/contact" ? <img src={folderIconPinkOpen} /> : <img src={folderIconPink} /> }
                 <span>Contact</span>
               </div>
             </Link>

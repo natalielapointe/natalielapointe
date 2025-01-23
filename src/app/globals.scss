@@ -162,7 +162,7 @@
 }
 
 .overflow {
-  max-height: 80vh;
+  max-height: calc(100vh - 135px);
   overflow-x: scroll;
 }
 
