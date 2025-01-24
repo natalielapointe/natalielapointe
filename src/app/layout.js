@@ -25,13 +25,20 @@ const RootLayout = ({ children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const scrollableDiv = document.getElementById('scrollable-div');
+    if (scrollableDiv) {
+      scrollableDiv.scrollTop = 0;
+    }
+  }, [pathname]);
+
   return (
     <html lang="en">
       <body id="appRoot" style={{ display: 'none' }}> 
         <div className="app-wrapper">
           <div className="container-wrapper">
             <div className="pixel-corners--wrapper">
-              <div className="overflow">
+              <div id="scrollable-div" className="overflow">
                 <div className='file-name-container shimmer'>
                   <span id="fileName" aria-hidden="true">portfolio.html</span>
                   <span className="close-button"></span>
