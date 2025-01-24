@@ -27,8 +27,8 @@ const RootLayout = ({ children }) => {
 
   return (
     <html lang="en">
-      <body id="appRoot" className="background shimmer" style={{ display: 'none' }}> 
-        <div className="background-pixel-grid gird-shift">
+      <body id="appRoot" style={{ display: 'none' }}> 
+        <div className="app-wrapper">
           <div className="container-wrapper">
             <div className="pixel-corners--wrapper">
               <div className="overflow">
@@ -67,6 +67,8 @@ const RootLayout = ({ children }) => {
             </Link>
           </nav>
         </div>
+        <div className="background-pixel-grid gird-shift"></div>
+        <div className="background shimmer"></div>
       </body>
     </html>
   );
