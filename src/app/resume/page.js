@@ -1,7 +1,7 @@
 export default function Resume() {
   return (
     <section id="resume" className="background-white flex-column">
-      <h1 className="gradient-text" >Experience</h1>
+      <h1  tabIndex="0" className="gradient-text" >Experience</h1>
       <div className="body-padding body-text-font">
         <article>
           <h2>Senior Software Engineer</h2>

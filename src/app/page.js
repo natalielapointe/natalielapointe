@@ -5,7 +5,7 @@ import graphicDesignerIcon from './images/graphicDesignerIcon.svg';
 export default function Home() {
   return (
     <section id="home" className='background-white flex-column'>
-      <h1 className="gradient-text">Natalie <br/> LaPointe</h1>
+      <h1 tabIndex="0" className="gradient-text">Natalie <br/> LaPointe</h1>
       <ul className="gradient-text padding-bottom home-list">
         <li className="title-wrapper">
           <img src={laptopIcon} alt="" />

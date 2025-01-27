@@ -200,6 +200,7 @@ h1 {
   font-family: 'Daydream';
   text-align: center;
   font-size: var(--font-large);
+  outline: none;
 }
 
 input:focus, 
@@ -433,7 +434,6 @@ a:focus-visible {
   border-radius: 4px;
   position: static;
   outline: none; 
-  margin-bottom: 8px;
 
   &:hover {
     cursor:pointer;
