@@ -131,6 +131,37 @@ body {
   overflow: auto;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px 0;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.pixel-star-1 {
+  height: 20px;
+  align-self: start;
+  position: absolute;
+  left: 0;
+  top: -13px;
+}
+
+.pixel-star-2 {
+  height: 20px;
+  align-self: end;
+  position: absolute;
+  bottom: -12px;
+  right: -16px;
+}
+
+form {
+  margin-bottom: 8px;
+}
+
 .background-white {
   background-color: white;
 }
