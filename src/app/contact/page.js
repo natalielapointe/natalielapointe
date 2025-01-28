@@ -75,18 +75,18 @@ const sendEmail = async (e) => {
         {!submitted && (
           <form ref={form} onSubmit={sendEmail} className="body-text-font flex-column">
             <div className="form-field">
-              <label>Name</label>
-              <input type="text" name="user_name" />
+              <label for="user_name">Name</label>
+              <input type="text" name="user_name" id="user_name"/>
               {errors.name && <p className="error-message">{errors.name}</p>}
             </div>
             <div className="form-field">
-              <label>Email</label>
-              <input type="email" name="user_email" />
+              <label for="user_email">Email</label>
+              <input type="email" name="user_email" id="user_email"/>
               {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
             <div className="form-field">
-              <label>Message</label>
-              <textarea name="message" />
+              <label for="message">Message</label>
+              <textarea name="message" id="message" />
               {errors.message && <p className="error-message">{errors.message}</p>}
             </div>
             <div className="button-outline">
@@ -94,6 +94,7 @@ const sendEmail = async (e) => {
                 type="submit" 
                 id="submitButton" 
                 className="gradient-text pixel-corners--wrapper"
+                aria-label={!loading ? "send" : "sending"}
               >
                 {!loading 
                   ? 'Send'.split('').map((letter, index) => (
