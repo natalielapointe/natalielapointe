@@ -472,12 +472,34 @@ a:focus-visible {
   }
 }
 
-#formSubmitMessage {
+#successMessage {
   font-family: 'VT323';
   font-size: x-large;
   text-align: center;
   margin-top: 0;
   color: #6f123f;
+  outline: none;
+}
+
+.error-alert-wrapper {
+  font-family: 'VT323';
+  color: #dd2680;
+  text-align: left;
+  outline: none;
+  width: fit-content;
+  margin: 0 auto 10px;
+  font-size: var(--font-medium);
+  max-width: 80%;
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+  }
+
+  li::marker {
+    content: "• ";
+  }
 }
 
 .error-message {
@@ -485,6 +507,15 @@ a:focus-visible {
   color: #dd2680;
   text-align: left;
   @extend .body-text-font;
+}
+
+#errorMessage {
+  font-family: 'VT323';
+  font-size: x-large;
+  text-align: center;
+  margin-top: 0;
+  color: #dd2680;
+  outline: none;
 }
 
 .form-field {

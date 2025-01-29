@@ -30,7 +30,6 @@ const RootLayout = ({ children }) => {
     if (scrollableDiv) {
       scrollableDiv.scrollTop = 0;
     }
-    console.log(document.querySelectorAll('h1'))
     document.querySelector('h1')?.focus();
   }, [pathname]);
 
