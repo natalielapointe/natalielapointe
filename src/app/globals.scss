@@ -156,26 +156,22 @@ body {
   right: -16px;
 }
 
-@keyframes animateSprites {
-  0% { background-image: url('./images/pixelStar.svg'); }
-  16.67% { background-image: url('./images/pixelStar2.svg'); }
-  33.33% { background-image: url('./images/pixelStar3.svg'); }
-  50% { background-image: url('./images/pixelStar4.svg'); }
-  66.67% { background-image: url('./images/pixelStar3.svg'); }
-  83.33% { background-image: url('./images/pixelStar2.svg'); }
-  100% { background-image: url('./images/pixelStar.svg'); } 
+@keyframes rotate3D {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
+
 
 .animated-sprite {
   background-image: url('./images/pixelStar.svg');
   height: 20px;
   width: 20px;
-  background-size: cover;
-  animation: animateSprites .5s steps(6) 10;
-}
-
-.animated-sprite:hover {
-  animation: none; 
+  transform-origin: center;
+  animation: rotate3D 1s linear 5;
 }
 
 form {
