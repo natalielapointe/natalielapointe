@@ -35,6 +35,12 @@ const RootLayout = ({ children }) => {
 
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Senior Software Engineer specializing in accessible front-end development, React, and design systems. Explore my work, skills, and projects." />
+        <title>Natalie LaPointe | Senior Software Engineer</title>
+      </head>
       <body id="appRoot" style={{ display: 'none' }}>
         <div className="app-wrapper">
           <div className="container-wrapper">
@@ -51,25 +57,25 @@ const RootLayout = ({ children }) => {
           <nav className="nav-wrapper">
             <Link href="/" onClick={() => setPathname("/")}>
               <div className="nav-item-wrapper">
-                {pathname === "/" ? <img src={folderIconOpen} /> : <img src={folderIcon} />}
+                {pathname === "/" ? <img src={folderIconOpen} alt="" /> : <img src={folderIcon}  alt="" />}
                 <span>Home</span>
               </div>
             </Link>
             <Link href="/about-me" onClick={() => setPathname("/about-me")}>
               <div className="nav-item-wrapper">
-                {pathname === "/about-me" ? <img src={folderIconOrangeOpen} /> : <img src={folderIconOrange} />}
+                {pathname === "/about-me" ? <img src={folderIconOrangeOpen} alt="" /> : <img src={folderIconOrange} alt="" />}
                 <span>About <br /> me</span>
               </div>
             </Link>
             <Link href="/resume" onClick={() => setPathname("/resume")}>
               <div className="nav-item-wrapper">
-                {pathname === "/resume" ? <img src={folderIconPurpleOpen} /> : <img src={folderIconPurple} />}
+                {pathname === "/resume" ? <img src={folderIconPurpleOpen} alt="" /> : <img src={folderIconPurple} alt="" />}
                 <span>Resume</span>
               </div>
             </Link>
             <Link href="/contact" onClick={() => setPathname("/contact")}>
               <div className="nav-item-wrapper">
-                {pathname === "/contact" ? <img src={folderIconPinkOpen} /> : <img src={folderIconPink} />}
+                {pathname === "/contact" ? <img src={folderIconPinkOpen} alt="" /> : <img src={folderIconPink} alt="" />}
                 <span>Contact</span>
               </div>
             </Link>

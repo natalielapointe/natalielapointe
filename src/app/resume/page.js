@@ -4,6 +4,18 @@ export default function Resume() {
       <h1  tabIndex="0" className="gradient-text" >Experience</h1>
       <div className="body-padding body-text-font">
         <article>
+            <h2>Senior Software Engineer</h2>
+            <p>
+              <strong>The Lacek Group</strong>
+              | Minneapolis, MN |
+              <time dateTime="2022-05">Febuary 2025</time>–<time dateTime="2023-08">April 2025</time>
+            </p>
+            <ul>
+              <li>Created an intuitive point redemption website tailored to client reward initiatives, increasing user engagement and strengthening brand loyalty.</li>
+            </ul>
+          </article>
+
+        <article>
           <h2>Senior Software Engineer</h2>
           <p>
             <strong>Allianz Life</strong>
