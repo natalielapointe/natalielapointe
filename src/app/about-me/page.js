@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <section id="aboutMe" className="background-white">
       <div className="flex-row flex-justify-center">
-        <img id="facePhoto" class="pixel-corners--wrapper" src={facePhoto} alt="Natalie LaPointe"/>
+        <img id="facePhoto" class="pixel-corners--wrapper" src={facePhoto} alt="A pixel portrait of Natalie LaPointe"/>
         <h1  tabIndex="0" className="gradient-text text-left-align">A little <br/> about me</h1>
       </div>
       <div className="flex-column body-padding">
