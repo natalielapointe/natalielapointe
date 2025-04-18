@@ -1,10 +1,10 @@
-import facePhoto from '../images/face-photo.png';
+import facePhoto from '../images/pixel-portrait.png';
 
 const AboutMe = () => {
   return (
     <section id="aboutMe" className="background-white">
       <div className="flex-row flex-justify-center">
-        <img id="facePhoto" src={facePhoto} alt="Natalie LaPointe"/>
+        <img id="facePhoto" class="pixel-corners--wrapper" src={facePhoto} alt="Natalie LaPointe"/>
         <h1  tabIndex="0" className="gradient-text text-left-align">A little <br/> about me</h1>
       </div>
       <div className="flex-column body-padding">
