@@ -4,34 +4,32 @@ export default function Resume() {
       <h1  tabIndex="0" className="gradient-text" >Experience</h1>
       <div className="body-padding body-text-font">
         <article>
-            <h2>Senior Software Engineer</h2>
+            <h2>The Lacek Group</h2>
             <p>
-              <strong>The Lacek Group</strong>
+              <strong>Senior Software Engineer</strong>
               | Minneapolis, MN |
               <time dateTime="2022-05">Febuary 2025</time>–<time dateTime="2023-08">April 2025</time>
             </p>
             <ul>
-              <li>Created an intuitive point redemption website tailored to client reward initiatives, increasing user engagement and strengthening brand loyalty.</li>
+              <li>Assembled an intuitive point redemption website for a national car rental company to amplify user engagement and strengthen brand loyalty using client reward initiatives & incentives.</li>
             </ul>
           </article>
 
         <article>
-          <h2>Senior Software Engineer</h2>
+          <h2>Allianz Life</h2>
           <p>
-            <strong>Allianz Life</strong>
+            <strong>Senior Software Engineer</strong>
             | Golden Valley, MN |
             <time dateTime="2022-05">May 2022</time>–<time dateTime="2023-08">August 2023</time>
           </p>
           <ul>
-            <li>Created and maintained Allianz Life’s component library <a href="https://www.axl-ui.com/?path=/docs/introduction--docs">AXL-UI</a> using React, Pattern Lab, and SCSS.</li>
-            <li>Led the accessibility team to coordinate accessibility issues, auditing, and learning opportunities.</li>
-            <li>Tested and audited components to ensure compliance with WCAG standards.</li>
-            <li>Developed customer-facing calculators using React.</li>
+            <li>Orchestrated a team of six developers and designers to streamline a top insurer's UX accessibility initiatives, equipped them with WCAG best practices, and enforced compliance through rigorous audits & testing.</li>
+            <li>Developed customer-facing calculators to elevate UX interactivity, designed & maintained enterprise component library, <a href="https://www.axl-ui.com/?path=/docs/introduction--docs">AXL-UI</a>, and boosted consistency across multiple platforms.</li>
           </ul>
         </article>
 
         <article>
-          <h2>Owner</h2>
+          <h2>Small Business Owner</h2>
           <p>
             <strong><a href="https://www.etsy.com/shop/NatKatCraftsCo?ref=seller-platform-mcnav">NatKatCraftsCo</a></strong>
             | Etsy | Minneapolis, MN |
@@ -44,49 +42,46 @@ export default function Resume() {
         </article>
 
         <article>
-          <h2>Front End Developer II</h2>
+          <h2>Best Buy</h2>
           <p>
-            <strong>Best Buy</strong>
+            <strong>Senior Software Engineer</strong>
             | Richfield, MN |
             <time dateTime="2019-07">July 2019</time>–<time dateTime="2020-01">January 2020</time>
           </p>
           <ul>
-            <li>Improved online shopping experience for Best Buy customers across multiple teams using React.</li>
-            <li>Created new Cypress end-to-end tests to ensure stability.</li>
+            <li>Revamped a top retailer's eCommerce experience across multiple teams, prioritizing accessibility to present a user-empathetic experience that attracts and retains customers.</li>
+            <li>Implemented robust end-to-end testing strategies that magnified application stability.</li>
           </ul>
         </article>
 
         <article>
-          <h2>Software Engineer</h2>
+          <h2>Allianz Life</h2>
           <p>
-            <strong>Allianz Life</strong>
+            <strong>Software Engineer</strong>
             | Golden Valley, MN |
             <time dateTime="2017-10">October 2017</time>–<time dateTime="2019-07">July 2019</time>
           </p>
           <ul>
-            <li>Created and maintained multiple component libraries for Allianz properties using React, Pattern Lab, and SCSS.</li>
-            <li>Established development and accessibility standards for the component library.</li>
-            <li>Developed consumer and business calculators using React and Mobx.</li>
+            <li>Structured and maintained several component libraries, established clear accessibility and development standards for them, and engineered consumer and business calculators that translate life insurance policies' technical details into easily understood terms.</li>
           </ul>
         </article>
 
         <article>
-          <h2>Software Engineer</h2>
+          <h2>RAZR Marketing</h2>
           <p>
-            <strong>RAZR Marketing</strong>
+            <strong>Software Engineer</strong>
             | Minnetonka, MN |
             <time dateTime="2016-09">September 2016</time>–<time dateTime="2017-08">August 2017</time>
           </p>
           <ul>
-            <li>Built Angular component library for RAZR developers to streamline development processes.</li>
-            <li>Led front-end development for templatizing US Bank’s rewards site using Angular and PHP.</li>
+            <li>Engineered a component library that skyrocketed development efficiency for a creative agency's technical teams, accelerating iteration and driving cohesive user experiences across projects delivered to financial & healthcare institutions.</li>
           </ul>
         </article>
 
         <article>
-          <h2>Front End Design Intern</h2>
+          <h2>SportsEngine</h2>
           <p>
-            <strong>SportsEngine</strong>
+            <strong>Software Engineer Intern</strong>
             | Minneapolis, MN |
             <time dateTime="2016-05">May 2016</time>–<time dateTime="2016-08">August 2016</time>
           </p>
